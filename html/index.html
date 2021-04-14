@@ -6,23 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WeatherAPI</title>
     <link rel="stylesheet" href="../css/index.css">
+   
 </head>
 <body>
-    <div class="js-clock">
-        <h1>00:00</h1>
-    </div>
-    <form class="js-form form">
-        <input type="text" placeholder="What is your name?">
-    </form>
-    <h4 class="js-greetings greetings"></h4>
-    <form class="js-toDoForm">
-        <input type="text" placeholder="Write a to do"/>
-    </form>
-    <ul class="js-toDoList">
-    </ul>
+    <container>
+        <header class="header">
+            <div class="js-weather"></div>
+        </header>
+        <section class="container-top">
+        <div class="welcome-greeting">
+            <div class="js-clock">
+                <h1>00:00</h1>
+            </div>
+            <form class="js-form form">
+                <input type="text" placeholder="What is your name?">
+            </form>
+            <h4 class="js-greetings greetings"></h4>
+        </div>
+        <div class="class:toDoDiv">
+            <form class="js-toDoForm">
+                <input type="text" placeholder="Write a to do"/>
+            </form>
+            <ul class="js-toDoList">
+            </ul>
+        </div>
+    </section>
+</container>
+    
     <script src="../js/clock.js"></script>
     <script src="../js/greeting.js"></script>
     <script src="../js/todo.js"></script>
-    <script src="../js/weatherAPI"></script>
+    <script src="../js/bg.js"></script>
+    <script src="../js/weather.js"></script>
+
 </body>
 </html>
