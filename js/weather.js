@@ -1,4 +1,5 @@
-const API_KEY = '39e9de743ae58388305e01763e827eb3';
+import {config} from './config.js';
+const weatherKey = config.API_KEY;
 const COORDS = `coards`;
 const weather = document.querySelector('.js-weather');
 
@@ -26,8 +27,8 @@ function askForCoords(){
     navigator.geolocation.getCurrentPosition(handleGeoSucess, handleGeoError);
 }
 
-function callApi(lat, lnt){
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lnt}&appid=${API_KEY}&units=metric`
+ function callApi(lat, lnt){
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lnt}&appid=${weatherKey}&units=metric`
     )
     .then((response) => {
         return response.json();
@@ -37,7 +38,7 @@ function callApi(lat, lnt){
         const place = json.name;
         weather.innerText = `현재 기온 : ${temperature} \n 위치 : ${place}`;
     });
-}
+} 
 
 function loadCoords(){
     const loadedCoords = localStorage.getItem(COORDS);
@@ -51,7 +52,9 @@ function loadCoords(){
 }
 
 function init(){
+    console.log("???");
     loadCoords();
+   
 }
 
 init();
