@@ -1,5 +1,6 @@
 import {config} from './config.js';
 const weatherKey = config.API_KEY;
+
 const COORDS = `coards`;
 const weather = document.querySelector('.js-weather');
 
