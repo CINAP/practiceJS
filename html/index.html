@@ -1,43 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WeatherAPI</title>
-    <link rel="stylesheet" href="../css/index.css">
-   
-</head>
-<body>
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <container>
-        <header class="header">
-            <div class="js-weather"></div>
-        </header>
-        <section class="container-top">
+      <header class="header">
+        <div class="js-weather"></div>
+      </header>
+      <section class="container-top">
         <div class="welcome-greeting">
-            <div class="js-clock">
-                <h1>00:00</h1>
-            </div>
-            <form class="js-form form">
-                <input type="text" placeholder="What is your name?">
-            </form>
-            <h4 class="js-greetings greetings"></h4>
+          <div class="js-clock">
+            <h1>00:00</h1>
+          </div>
+          <h1 id="greetingName">당신의 이름을 적어주세요!</h1>
+          <form class="js-form form">
+            <input type="text" />
+          </form>
+          <h4 class="js-greetings greetings"></h4>
         </div>
         <div class="class:toDoDiv">
-            <form class="js-toDoForm">
-                <input type="text" placeholder="Write a to do"/>
-            </form>
-            <ul class="js-toDoList">
-            </ul>
+          <h1 id="greetingToDo">무엇을 할 예정이신가요?</h1>
+          <form class="js-toDoForm">
+            <input type="text" />
+          </form>
+          <div class="js-toDoList">
+            <div class="do">
+              <h3>해야할일</h3>
+              <ul class="doList"></ul>
+            </div>
+            <div class="fsh">
+              <h3>처리한일</h3>
+              <ul class="finished"></ul>
+            </div>
+          </div>
         </div>
-    </section>
-</container>
-    
+      </section>
+    </container>
+
     <script src="../js/clock.js"></script>
     <script src="../js/greeting.js"></script>
     <script src="../js/todo.js"></script>
     <script src="../js/bg.js"></script>
     <script type="module" src="../js/weather.js"></script>
-
-</body>
+  </body>
 </html>
